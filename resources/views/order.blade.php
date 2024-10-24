@@ -22,6 +22,11 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+            @if(session('delete'))
+            <div class="alert alert-success" role="alert">
+                {{session('delete')}}
+            </div>
+        @endif
             <div class="row">
                 <div class="col">
                     <table class="table table-striped">

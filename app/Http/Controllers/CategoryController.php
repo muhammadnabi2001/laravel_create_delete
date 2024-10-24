@@ -32,7 +32,7 @@ class CategoryController extends Controller
     {
         $model=category::find($id);
         $model->delete();
-        return redirect('/');
+        return redirect('/')->with('delete',"Ma'lumot o'chirildi");
 
     }
 }

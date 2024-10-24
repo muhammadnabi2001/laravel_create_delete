@@ -44,7 +44,7 @@ class Postcontroller extends Controller
         //dd(123);
         $model=post::find($id);
         $model->delete();
-        return redirect('/post');
+        return redirect('/post')->with('delete',"Ma'lumot o'chirildi");
 
     }
 

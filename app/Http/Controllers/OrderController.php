@@ -18,7 +18,7 @@ class OrderController extends Controller
        // dd(123);
         $model=Order::find($id);
         $model->delete();
-        return redirect('/order');
+        return redirect('/order')->with("delete","Ma'lumot o'chirildi");
 
     }
 }

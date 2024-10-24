@@ -7,6 +7,11 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
+            @if(session('delete'))
+                <div class="alert alert-success" role="alert">
+                    {{session('delete')}}
+                </div>
+            @endif
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Category</h1>

@@ -39,7 +39,7 @@ class ProductController extends Controller
         //dd(123);
         $model=Product::find($id);
         $model->delete();
-        return redirect('/product');
+        return redirect('/product')->with('delete',"Ma'lumot o'chirildi");
 
     }
 }

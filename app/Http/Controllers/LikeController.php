@@ -18,7 +18,7 @@ class LikeController extends Controller
         //dd(123);
         $model=like::find($id);
         $model->delete();
-        return redirect('/like');
+        return redirect('/like')->with('delete',"Ma'lumot o'chirildi");
 
     }
 }
