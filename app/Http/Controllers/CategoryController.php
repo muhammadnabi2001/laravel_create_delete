@@ -22,11 +22,11 @@ class CategoryController extends Controller
     }
     public function category(Request $request)
     {
-        $request->validate(['name'=>'Required|max:255']);
+        $request->validate(['name'=>'required|max:255'],['name.required'=>"nameni to'ldiring"]);
         $category=new category();
         $category->name=$request->name;
         $category->save();
-        return redirect('/');
+        return redirect('/')->with('success',"Ma'lumot muvaffaqiyatli qo'shildi");
     }
     public function delete(int $id)
     {

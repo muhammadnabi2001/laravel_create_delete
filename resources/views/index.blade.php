@@ -12,6 +12,11 @@
                     {{session('delete')}}
                 </div>
             @endif
+            @if (session('success'))
+            <div class="alert alert-success">
+            {{ session('success') }}
+            </div>
+             @endif
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Category</h1>

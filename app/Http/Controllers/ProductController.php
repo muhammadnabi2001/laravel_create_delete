@@ -25,14 +25,17 @@ class ProductController extends Controller
         $request->validate(['name'=>'required',
         'category_id'=>'required',
         'count'=>'required',
-        'price'=>'required']);
+        'price'=>'required'],['name.required'=>"nameni to'ldiring",
+            'category_id.required'=>"categoryni to'diring",
+    'count.required'=>"countni to'ldiring",
+'price'=>"price ni to'ldiring"]);
         $product=new Product();
         $product->name=$request->name;
         $product->category_id=$request->category_id;
         $product->price=$request->price;
         $product->count=$request->count;
         $product->save();
-        return redirect('/product');
+        return redirect('/product')->with('success',"Ma'lumot muvvafaqiyatli qo'shildi");
     }
     public function delete(int $id)
     {

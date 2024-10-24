@@ -27,6 +27,7 @@
                 {{session('delete')}}
             </div>
         @endif
+        
             <div class="row">
                 <div class="col">
                     <table class="table table-striped">

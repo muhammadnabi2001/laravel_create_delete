@@ -6,7 +6,7 @@
 <div class="content-wrapper">
    <div class="card">
       <div class="card-header bg-primary text-white">
-         <h3 class="card-title">Category Details</h3>
+         <h3 class="card-title">Comment Details</h3>
       </div>
       <div class="card-body">
          <table class="table table-bordered">

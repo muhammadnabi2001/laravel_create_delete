@@ -29,7 +29,9 @@ class Postcontroller extends Controller
             'category_id' => 'Required',
             'like' => 'Required',
             'dislike' => 'Required'
-        ]);
+        ],['title.required'=>"Titleni to'ldiring",
+    'body.required'=>"Bodyni to'ldiring",
+'category_id.required'=>"Category ni to'ldiring"]);
         $post = new post();
         $post->title = $request->title;
         $post->body = $request->body;
@@ -37,7 +39,7 @@ class Postcontroller extends Controller
         $post->like = $request->like;
         $post->dislike = $request->dislike;
         $post->save();
-        return redirect('/post');
+        return redirect('/post')->with('success',"Ma'lumot muvvafaqiyatli qo'shildi");
     }
     public function delete(int $id)
     {

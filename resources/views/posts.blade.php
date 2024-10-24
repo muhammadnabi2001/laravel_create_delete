@@ -14,7 +14,7 @@
             </div>
             <div class="row mb-2">
                 <div class="col-sm-6 mt-2">
-                    <a href="/createpost" class="btn btn-primary">Create</a>
+                    <a href="/createpost" class="btn btn-primary m-2">Create</a>
                 </div>
             </div>
         </div>
@@ -28,6 +28,11 @@
                 {{session('delete')}}
             </div>
         @endif
+        @if (session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div>
+      @endif
             <div class="row">
                 <div class="col">
                     <table class="table table-striped">
