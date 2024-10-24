@@ -35,4 +35,10 @@ class CategoryController extends Controller
         return redirect('/')->with('delete',"Ma'lumot o'chirildi");
 
     }
+    public function detail(int $id)
+    {
+        $models=category::find($id);
+        //dd($models);
+        return view('detailcategory',['models'=>$models]);
+    }
 }

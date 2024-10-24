@@ -34,3 +34,4 @@ Route::delete('/comment/{id}',[CommentController::class,'delete']);
 Route::delete('/like/{id}',[LikeController::class,'delete']);
 Route::delete('/product/{id}',[ProductController::class,'delete']);
 Route::delete('/order/{id}',[OrderController::class,'delete']);
+Route::get('/detailcategory/{id}',[CategoryController::class,'detail']);
