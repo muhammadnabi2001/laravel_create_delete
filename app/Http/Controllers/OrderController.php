@@ -21,4 +21,10 @@ class OrderController extends Controller
         return redirect('/order')->with("delete","Ma'lumot o'chirildi");
 
     }
+    public function detail(int $id)
+    {
+        $models=Order::find($id);
+        //dd($models);
+        return view('detailorder',['models'=>$models]);
+    }
 }

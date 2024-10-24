@@ -40,3 +40,4 @@ Route::get('/detailpost/{id}',[PostController::class,'detail']);
 Route::get('/detailcomment/{id}',[CommentController::class,'detail']);
 Route::get('/detaillike/{id}',[likeController::class,'detail']);
 Route::get('/detailproduct/{id}',[ProductController::class,'detail']);
+Route::get('/detailorder/{id}',[OrderController::class,'detail']);
