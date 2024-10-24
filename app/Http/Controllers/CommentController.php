@@ -37,4 +37,10 @@ class CommentController extends Controller
         return redirect('/comment')->with('delete',"Ma'lumot o'chirildi");
 
     }
+    public function detail(int $id)
+    {
+        $models=Comment::find($id);
+        //dd($models);
+        return view('detailcomment',['models'=>$models]);
+    }
 }

@@ -47,5 +47,11 @@ class Postcontroller extends Controller
         return redirect('/post')->with('delete',"Ma'lumot o'chirildi");
 
     }
+    public function detail(int $id)
+    {
+        $models=post::find($id);
+        //dd($models);
+        return view('detailpost',['models'=>$models]);
+    }
 
 }

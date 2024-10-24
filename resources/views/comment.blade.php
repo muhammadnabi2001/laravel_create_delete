@@ -51,7 +51,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <a href="/show_category" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg"
+                                    <a href="/detailcomment/{{$model->id}}" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg"
                                             width="16" height="16" fill="currentColor" class="bi bi-info"
                                             viewBox="0 0 16 16">
                                             <path

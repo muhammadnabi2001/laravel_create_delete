@@ -42,4 +42,10 @@ class ProductController extends Controller
         return redirect('/product')->with('delete',"Ma'lumot o'chirildi");
 
     }
+    public function detail(int $id)
+    {
+        $models=Product::find($id);
+        //dd($models);
+        return view('detailproduct',['models'=>$models]);
+    }
 }
