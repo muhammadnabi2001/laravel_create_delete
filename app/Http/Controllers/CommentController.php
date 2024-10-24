@@ -29,4 +29,12 @@ class CommentController extends Controller
     $comment->save();
     return redirect('/comment');
     }
+    public function delete(int $id)
+    {
+        //dd(123);
+        $model=Comment::find($id);
+        $model->delete();
+        return redirect('/comment');
+
+    }
 }

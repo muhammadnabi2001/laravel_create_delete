@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\category;
 use Illuminate\Http\Request;
+use Post;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class CategoryController extends Controller
@@ -26,5 +27,12 @@ class CategoryController extends Controller
         $category->name=$request->name;
         $category->save();
         return redirect('/');
+    }
+    public function delete(int $id)
+    {
+        $model=category::find($id);
+        $model->delete();
+        return redirect('/');
+
     }
 }

@@ -13,4 +13,12 @@ class LikeController extends Controller
         $models=like::all();
         return view('/like',['models'=>$models]);
     }
+    public function delete(int $id)
+    {
+        //dd(123);
+        $model=like::find($id);
+        $model->delete();
+        return redirect('/like');
+
+    }
 }

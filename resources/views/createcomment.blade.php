@@ -3,6 +3,15 @@
 @section('content')
 <div class="content-wrapper">
   <a href="/" class="btn btn-primary mt-2">Create</a>
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
   
       <!-- /.card-header -->
       <!-- form start -->

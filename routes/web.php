@@ -8,6 +8,7 @@ use App\Http\Controllers\Postcontroller;
 use App\Http\Controllers\ProductController;
 use App\Models\Comment;
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,3 +28,9 @@ Route::get('/addcomment',[CommentController::class,'addcomment']);
 Route::post('/createcomment',[CommentController::class,'createcomment']);
 Route::get('/createproduct',[ProductController::class,'createproduct']);
 Route::post('/addproduct',[ProductController::class,'addproduct']);
+Route::delete('/category/{id}',[CategoryController::class,'delete']);
+Route::delete('/post/{id}',[PostController::class,'delete']);
+Route::delete('/comment/{id}',[CommentController::class,'delete']);
+Route::delete('/like/{id}',[LikeController::class,'delete']);
+Route::delete('/product/{id}',[ProductController::class,'delete']);
+Route::delete('/order/{id}',[OrderController::class,'delete']);

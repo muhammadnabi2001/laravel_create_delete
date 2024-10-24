@@ -13,4 +13,12 @@ class OrderController extends Controller
         $models=Order::all();
         return view('/order', ['models'=> $models]);
     }
+    public function delete(int $id)
+    {
+       // dd(123);
+        $model=Order::find($id);
+        $model->delete();
+        return redirect('/order');
+
+    }
 }

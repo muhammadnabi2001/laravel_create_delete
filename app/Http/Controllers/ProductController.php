@@ -34,4 +34,12 @@ class ProductController extends Controller
         $product->save();
         return redirect('/product');
     }
+    public function delete(int $id)
+    {
+        //dd(123);
+        $model=Product::find($id);
+        $model->delete();
+        return redirect('/product');
+
+    }
 }

@@ -39,4 +39,13 @@ class Postcontroller extends Controller
         $post->save();
         return redirect('/post');
     }
+    public function delete(int $id)
+    {
+        //dd(123);
+        $model=post::find($id);
+        $model->delete();
+        return redirect('/post');
+
+    }
+
 }
